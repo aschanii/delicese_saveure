@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="logo_gallek.png" type="image/x-icon">
+    <link rel="stylesheet" href="testing_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Passions+Conflict&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('.table-hidden');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        table.classList.add('table-visible');
+                        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                    }
+                });
+            }, {
+                threshold: 0.1 // Déclenche l'animation lorsque 10% du tableau est visible
+            });
+
+            observer.observe(table);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Délicesé & Saveurs</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="tessting_1.html">Accueil</a></li>
+                    <li><a href="#recettes">Recettes</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="box">
+            <input type="text" placeholder="Search ..">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </section>
+    <section>
+        <!-- la premiere image  -->
+        <img src="family&food.jpg" alt="Family and Food" class="ff">
+    </section>
+    <section>
+        <table class="table-hidden" id="recettes">
+            <caption>Recette de la semaine</caption>
+            <tr>
+                <td rowspan="5" class="image-cell">
+                    <img src="red velvet.jpg" alt="Red Velvet Cake" class="r_vel_image">
+                </td>
+                <td class="ktaba_R_V">~~ Red Velvet ~~</td>
+            </tr>
+            <tr>
+                <td>-- Dessert --</td>
+            </tr>
+            <tr>
+                <td>
+                    <span><i class="fas fa-clock" id="bb"></i> 40 min</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><i class="fas fa-mug-hot" id="bb"></i> 10 - 12</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- <i class="fas fa-mug-hot"></i> 10 - 12 servings -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="red_velvet.html" class="view-recipe">View Recipe</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="logo">Délicesé & Saveurs</span> &reg;
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="featured-recipes">
+        <h2 class="section-title">Recettes Populaires</h2>
+        <div class="recipes-grid">
+            <div class="recipe-card">
+                <img src="lasagna.jpg" alt="Recette" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Lasagna</h3>
+                    <div class="recipe-info">
+                        <span><i class="fas fa-clock" id="aa"></i> 1h 15m</span>
+                        <span><i class="fas fa-signal" id="aa"></i> Difficulté: Moyenne</span>
+                        <!-- <span>Temps: 1h15</span>
+                        <span>Difficulté: Moyenne</span> -->
+                    </div>
+                    <p class="recipe-description"> Ce plat italien emblématique superpose des couches de pâte, de sauce
+                        bolognaise, de béchamel et de fromage pour une gourmandise réconfortante.</p>
+                    <a href="lasagna.html" class="cta-button">Voir la Recette</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="RATATOUILLE.jpg" alt="Recette" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Ratatouille</h3>
+                    <div class="recipe-info">
+                        <!-- <span>Temps: 1h</span> -->
+                        <span><i class="fas fa-clock" id="aa"></i> 1h 15m</span>
+                        <span><i class="fas fa-signal" id="aa"></i> Difficulté: Medium</span>
+                        <!-- <span>Difficulté: Facile</span> -->
+                    </div>
+                    <p class="recipe-description"> Un classique de la cuisine provençale, mélangeant des légumes mijotés
+                        pour une explosion de saveurs méditerranéennes.
+                    </p>
+                    <a href="Ratatouille.html" class="cta-button">Voir la Recette</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="Blueberry Pie.jpg" alt="Recette" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">La tarte aux myrtilles</h3>
+                    <div class="recipe-info">
+                        <!-- <span>Temps: 45min</span>
+                        <span>Difficulté: Moyenne</span> -->
+                        <span><i class="fas fa-clock" id="aa"></i> 1h 15m</span>
+                        <span><i class="fas fa-signal" id="aa"></i> Difficulté: Moyenne</span>
+                    </div>
+                    <p class="recipe-description"> Une douceur fruitée qui met à l'honneur la saveur acidulée et sucrée
+                        des myrtilles sur une pâte croustillante.</p>
+                    <a href="tarte_myrt.html" class="cta-button">Voir la Recette</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="button_2">
+            <div class="text_2">
+                <h1><span class="logo">Délicesé & Saveurs</span></h1>
+                <p>Des recettes simples, délicieuses et accessibles à tous. Découvrez, cuisinez et partagez vos moments
+                    gourmands.</p> 
+            </div>
+
+            <img src="logo_bla_ktaba.png" alt="" class="azer">
+        </div>
+    </section> -->
+    <!-- <section class="video-section">
+        <video autoplay muted loop class="video-bg">
+            <source src="join_us.mp4" type="video/mp4">
+        </video>
+
+        <div class="button_2">
+            <div class="text_2">
+                <h1><span class="logo">Délicesé & Saveurs</span></h1>
+                <a href="form.html">
+                    <p>Rejoignez-nous dans cette aventure gourmande et découvrez des saveurs qui éveilleront vos
+                        papilles !</p>
+                </a>
+            </div>
+
+            <a href="form.html" target="_top">
+                <img src="logo_bla_ktaba.png" alt="" class="azer">
+            </a>
+        </div>
+    </section> -->
+    <footer>
+        <p>&copy; 2025 Recipes for All. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette Tarte aux Myrtilles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="tarte_myrt.css">
+</head>
+
+<body>
+
+    <div class="recipe-card">
+        <div class="recipe-header">
+            <img src="Blueberry Pie.jpg" alt="Tarte aux Myrtilles">
+            <h1>Tarte aux Myrtilles</h1>
+        </div>
+        <div class="recipe-details">
+            <div class="info">
+                <span><i class="fas fa-clock"></i> Temps de préparation : 1h 30m</span>
+                <span><i class="fas fa-signal"></i> Difficulté : Moyenne</span>
+            </div>
+            <p><strong>Description :</strong> Une délicieuse tarte fruitée, garnie de myrtilles juteuses et d'une pâte
+                sablée croquante.</p>
+            <h3>Ingrédients :</h3>
+            <ul class="ingredients">
+                <li><i class="fas fa-carrot"></i> 250g de farine</li>
+                <li><i class="fas fa-carrot"></i> 125g de beurre froid</li>
+                <li><i class="fas fa-carrot"></i> 100g de sucre</li>
+                <li><i class="fas fa-carrot"></i> 1 œuf</li>
+                <li><i class="fas fa-carrot"></i> 500g de myrtilles</li>
+                <li><i class="fas fa-carrot"></i> 2 cuillères à soupe de sucre en poudre</li>
+                <li><i class="fas fa-carrot"></i> 1 cuillère à soupe de maïzena</li>
+                <li><i class="fas fa-carrot"></i> Zeste de citron (facultatif)</li>
+            </ul>
+            <h3>Étapes de préparation :</h3>
+            <ul class="steps">
+                <li><i class="fas fa-check-circle"></i> Préparez la pâte : mélangez la farine et le sucre, ajoutez le
+                    beurre froid en morceaux, et sablez du bout des doigts.</li>
+                <li><i class="fas fa-check-circle"></i> Incorporez l'œuf, formez une boule, enveloppez-la dans un film
+                    plastique et laissez reposer au frais 30 minutes.</li>
+                <li><i class="fas fa-check-circle"></i> Préchauffez le four à 180°C (350°F).</li>
+                <li><i class="fas fa-check-circle"></i> Étalez la pâte et foncez un moule à tarte. Piquez le fond avec
+                    une fourchette.</li>
+                <li><i class="fas fa-check-circle"></i> Faites précuire la pâte à blanc pendant 15 minutes.</li>
+                <li><i class="fas fa-check-circle"></i> Mélangez les myrtilles avec le sucre, la maïzena et le zeste de
+                    citron.</li>
+                <li><i class="fas fa-check-circle"></i> Disposez les myrtilles sur la pâte précuite et enfournez pour 25
+                    minutes supplémentaires.</li>
+                <li><i class="fas fa-check-circle"></i> Laissez refroidir avant de servir. Bon appétit !</li>
+            </ul>
+        </div>
+
+        <!-- <a href="images/tarte_card.png" download="tarte_card.png">
+            <button class="btn">Télécharger la recette</button>
+        </a> -->
+        <a href="images/tarte_card.png" download="tarte_card.png">
+            <button class="btn">Télécharger la recette</button>
+        </a>
+        <!-- <button class="btn" id="downloadBtn">Télécharger la recette</button> -->
+    </div>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+            const filePath = "C:/Users/Dell/Desktop/tjriba/tarte_card.png"; // Chemin local
+            const fileName = "tarte_card.png"; // Nom du fichier
+
+            fetch(filePath)
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = fileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => console.error("Erreur lors du téléchargement :", error));
+        });
+    </script>
+
+</body>
+
+</html>

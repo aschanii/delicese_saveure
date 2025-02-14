@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette Lasagne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="lasagna.css">
+</head>
+
+<body>
+
+    <div class="recipe-card">
+        <div class="recipe-header">
+            <img src="lasagna.jpg" alt="Lasagnes">
+            <h1>Lasagnes</h1>
+        </div>
+        <div class="recipe-details">
+            <div class="info">
+                <span><i class="fas fa-clock"></i> Temps de préparation : 1h 15m</span>
+                <span><i class="fas fa-signal"></i> Difficulté : Moyenne</span>
+            </div>
+            <p><strong>Description :</strong> Ce plat emblématique italien alterne des couches de pâtes, sauce
+                bolognaise, béchamel et fromage pour un repas savoureux !</p>
+            <h3>Ingrédients :</h3>
+            <ul class="ingredients">
+                <li><i class="fas fa-carrot"></i> 500g de bœuf haché</li>
+                <li><i class="fas fa-carrot"></i> 1 oignon, haché</li>
+                <li><i class="fas fa-carrot"></i> 2 gousses d’ail, écrasées</li>
+                <li><i class="fas fa-carrot"></i> 800g de tomates en conserve</li>
+                <li><i class="fas fa-carrot"></i> 300g de feuilles de lasagne</li>
+                <li><i class="fas fa-carrot"></i> 500ml de sauce béchamel</li>
+                <li><i class="fas fa-carrot"></i> 200g de mozzarella râpée</li>
+                <li><i class="fas fa-carrot"></i> 100g de parmesan râpé</li>
+                <li><i class="fas fa-carrot"></i> 2 cuillères à soupe d’huile d’olive</li>
+                <li><i class="fas fa-carrot"></i> Sel et poivre au goût</li>
+            </ul>
+            <h3>Étapes de préparation :</h3>
+            <ul class="steps">
+                <li><i class="fas fa-check-circle"></i> Préchauffez le four à 190°C (375°F).</li>
+                <li><i class="fas fa-check-circle"></i> Chauffez l’huile d’olive dans une poêle, faites revenir l’oignon
+                    et l’ail jusqu’à ce qu’ils soient parfumés.</li>
+                <li><i class="fas fa-check-circle"></i> Ajoutez le bœuf haché, faites-le cuire jusqu’à ce qu’il soit
+                    bien doré. Incorporez les tomates en conserve, assaisonnez avec du sel et du poivre. Laissez mijoter
+                    20 minutes.</li>
+                <li><i class="fas fa-check-circle"></i> Faites cuire les feuilles de lasagne selon les instructions du
+                    paquet, puis réservez.</li>
+                <li><i class="fas fa-check-circle"></i> Dans un plat à gratin, disposez des couches successives de
+                    feuilles de lasagne, sauce bolognaise, béchamel et fromage. Répétez jusqu’à épuisement, en terminant
+                    par une couche de béchamel et de fromage.</li>
+                <li><i class="fas fa-check-circle"></i> Faites cuire au four pendant 45 minutes, ou jusqu’à ce que le
+                    dessus soit doré et bouillonnant.</li>
+                <li><i class="fas fa-check-circle"></i> Laissez reposer 10 minutes avant de servir. Bon appétit !</li>
+            </ul>
+        </div>
+        <!-- <button class="btn">Télécharger la recette</button> -->
+        <a href="images/LASAGNA_card.png" download="LASAGNA_card.png">
+            <button class="btn">Télécharger la recette</button>
+        </a>
+    </div>
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+            const filePath = "C:/Users/Dell/Desktop/tjriba/images/LASAGNA_card.png"; // Chemin local
+            const fileName = "LASAGNA_card.png"; // Nom du fichier
+
+            fetch(filePath)
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = fileName;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => console.error("Erreur lors du téléchargement :", error));
+        });
+    </script>
+</body>
+
+</html>

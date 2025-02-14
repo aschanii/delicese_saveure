@@ -1,0 +1,247 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette Red Velvet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="red_velvet.css">
+</head>
+
+<body>
+
+
+    <div class="recipe-header">
+        <video autoplay loop muted playsinline>
+            <source src="r_v_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Red Velvet</h1>
+    </div>
+    <div class="recipe-card">
+       
+        <div class="recipe-details">
+            <div class="info">
+                <span><i class="fas fa-clock"></i> Temps de préparation : 1h 45m</span>
+                <span><i class="fas fa-signal"></i> Difficulté : Moyenne</span>
+            </div>
+            <p><strong>Description :</strong> Un gâteau moelleux et délicat, connu pour sa belle couleur rouge et son
+                glaçage au fromage à la crème.</p>
+            <h3>Ingrédients :</h3>
+            <ul class="ingredients">
+                <li><i class="fas fa-cube"></i> 250g de farine</li>
+                <li><i class="fas fa-cube"></i> 300g de sucre</li>
+                <li><i class="fas fa-cube"></i> 2 cuillères à soupe de cacao en poudre</li>
+                <li><i class="fas fa-cube"></i> 1 cuillère à café de bicarbonate de soude</li>
+                <li><i class="fas fa-cube"></i> 240ml de lait fermenté</li>
+                <li><i class="fas fa-cube"></i> 120ml d'huile végétale</li>
+                <li><i class="fas fa-cube"></i> 2 œufs</li>
+                <li><i class="fas fa-cube"></i> 1 cuillère à café d'extrait de vanille</li>
+                <li><i class="fas fa-cube"></i> Colorant rouge</li>
+                <li><i class="fas fa-cube"></i> 200g de fromage à la crème</li>
+                <li><i class="fas fa-cube"></i> 100g de beurre</li>
+                <li><i class="fas fa-cube"></i> 200g de sucre glace</li>
+            </ul>
+            <h3>Étapes de préparation :</h3>
+            <ul class="steps">
+                <li><i class="fas fa-check-circle"></i> Préchauffez le four à 180°C (350°F).</li>
+                <li><i class="fas fa-check-circle"></i> Mélangez les ingrédients secs : farine, sucre, cacao,
+                    bicarbonate de soude.</li>
+                <li><i class="fas fa-check-circle"></i> Dans un autre bol, mélangez le lait fermenté, l'huile, les œufs,
+                    la vanille et le colorant.</li>
+                <li><i class="fas fa-check-circle"></i> Incorporez les ingrédients secs aux liquides, mélangez jusqu'à
+                    obtenir une pâte homogène.</li>
+                <li><i class="fas fa-check-circle"></i> Versez la pâte dans un moule graissé et enfournez pendant 35
+                    minutes.</li>
+                <li><i class="fas fa-check-circle"></i> Préparez le glaçage : fouettez le fromage à la crème, le beurre
+                    et le sucre glace.</li>
+                <li><i class="fas fa-check-circle"></i> Une fois le gâteau refroidi, étalez le glaçage uniformément.
+                    Décorez selon vos envies.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette Red Velvet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #FFF5E1;
+            color: #4A4A4A;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #8B0000;
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .video-container {
+            /* position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+            display: flex;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+            height: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .recipe-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .ingredients {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #8B0000;
+            padding-bottom: 5px;
+        }
+
+
+        ul,
+        ol {
+            margin-left: 20px;
+            list-style-type: none;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+
+        }
+
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #8B0000;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .step-number {
+            color: #8B0000;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Gâteau Red Velvet</h1>
+            <p>La recette classique au velours rouge et crème cheese</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="video-container">
+            <video controls loop>
+                <source src="red_kamel.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+
+        <div class="recipe-content">
+            <div class="ingredients">
+                <h2>Ingrédients</h2>
+                <ul>
+                    <li>300g de farine</li>
+                    <li>250g de sucre</li>
+                    <li>200g de beurre</li>
+                    <li>3 œufs</li>
+                    <li>1 cuillère à soupe de cacao</li>
+                    <li>1 cuillère à café de bicarbonate</li>
+                    <li>Colorant alimentaire rouge</li>
+                    <li>250ml de babeurre</li>
+                    <li>1 cuillère à café de vinaigre</li>
+                </ul>
+            </div>
+
+            <div class="instructions">
+                <h2>Préparation</h2>
+                <ol>
+                    <li><span class="step-number">1</span>Préchauffez le four à 180°C</li>
+                    <li><span class="step-number">2</span>Mélangez les ingrédients secs</li>
+                    <li><span class="step-number">3</span>Incorporez le beurre et les œufs</li>
+                    <li><span class="step-number">4</span>Ajoutez le colorant et le babeurre</li>
+                    <li><span class="step-number">5</span>Versez dans un moule et enfournez 30min</li>
+                    <li><span class="step-number">6</span>Préparez la crème cheese</li>
+                    <li><span class="step-number">7</span>Démoulez et laissez refroidir</li>
+                    <li><span class="step-number">8</span>Décorez avec la crème</li>
+                </ol>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new_header_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Passions+Conflict&display=swap"
+        rel="stylesheet">
+    <!--this for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo_name">
+            <a href="index.html" class="logo">Délicesé & Saveurs</a>
+        </div>
+        <div class="nav-menu">
+            <ul class="menu-site">
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#recettes">Recettes</a></li>
+                <li><a href="tessting_1.html">Accueil</a></li>
+            </ul>
+            <div class="menu-sl">
+                <div class="menu"><i id="icon" class='bx bx-menu'></i></div>
+                <div class="slide-menu">
+                    <ul class="menu-phone">
+                        <li><i class='bx bx-user bx-flashing'></i><a href="about.html"><span>À Propos</span></a></li>
+                        <li><i class='bx bxs-contact bx-flashing'></i><a href="#"><span
+                                    style="margin-right: 10px;">Contact</span></a></li>
+                        <li><i class='bx bx-book-bookmark bx-flashing'></i><a href="#recettes"><span>Recettes</span></a>
+                        </li>
+                        <li><i class='bx bxs-home bx-flashing'></i><a href="tessting_1.html"><span
+                                    style="margin-right: 10px;">Accueil</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="landing_page">
+        <div class="image_site">
+            <img src="video_jdid.gif" alt="">
+        </div>
+        <div class="paragraphe_site">
+            <h1><span class="single-case">B</span>ienvenue !</h1><br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsum at voluptate fugiat fugit nihil
+                minus est, nulla itaque commodi nisi? Molestias, nihil minima i .
+            </p>
+            <button>Join Us</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        const slide_menu = document.querySelector('.slide-menu');
+        const icon = document.getElementById('icon')
+        var a = 1
+        function transform() {
+            if (a == 1) {
+                slide_menu.style.transform = 'translateX(0px)'
+                a = 0
+            } else {
+                slide_menu.style.transform = 'translateX(174px)'
+                a = 1
+            }
+        }
+        icon.addEventListener('click', transform)
+    </script>
+</body>
+
+</html>

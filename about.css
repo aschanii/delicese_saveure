@@ -28,13 +28,25 @@ header {
 /* Logo */
 .logo {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    /* Taille responsive */
-    color: darkcyan;
-    text-decoration: none;
+    margin-top: 15px;
     font-family: "Passions Conflict", serif;
-    padding: 0.5rem;
+    color: rgb(76, 36, 5);
+    font-weight: 800;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 6px rgb(236, 116, 61));
     order: 1;
     /* Garder le logo à gauche */
+}
+
+.logo_1{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-top: 15px;
+    font-family: "Passions Conflict", serif;
+    color: rgb(76, 36, 5);
+    font-weight: 800;
+    text-decoration: none;
+    /* filter: drop-shadow(2px 2px 6px rgb(236, 116, 61)); */
+    order: 1;
 }
 
 /* Navigation */
@@ -193,113 +205,98 @@ header {
     }
 }
 
-.all {
-    background-color: rgb(243, 236, 227);
-    margin: 150px auto 0;
-    overflow: hidden;
-    border-radius: 20px;
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.Qsn {
-    background: beige;
-    width: 70%;
+body {
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin: 80px 0;
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 100px auto 0;
-
-}
-
-.Qsn p {
-
-    float: right;
-    width: 55%;
-    /* Ajustez la largeur selon vos besoins */
-    margin-left: 20px;
-    /* Espacement entre le texte et l'image */
-    text-align: justify;
-    /* Optionnel : pour un alignement propre */
-    line-height: 1.6;
-    /* Améliore la lisibilité */
-    position: relative;
-    z-index: 1000;
-}
-
-.Qsn img {
-    width: 50%;
-    height: 330px;
-    object-fit: cover;
+    background: white;
     border-radius: 15px;
-    float: left;
-    /* position: relative; */
-    position: absolute;
-    opacity: 0.7;
-    margin-bottom: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
 }
 
-.Qsn h1 {
-    text-align: center;
-    font-family: "Passions Conflict", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.hidden {
-    visibility: hidden;
+.section:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-/* ***************************************************************************************************************************************** */
-.nConcept {
-    background: beige;
-    width: 70%;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 100px auto 0;
+.section-image {
+    flex: 1;
+    padding: 20px;
 }
 
-.nConcept p {
-    float: right;
-    width: 55%;
-    /* Ajustez la largeur selon vos besoins */
-    margin-left: 20px;
-    /* Espacement entre le texte et l'image */
-    text-align: justify;
-    /* Optionnel : pour un alignement propre */
-    line-height: 1.6;
-    /* Améliore la lisibilité */
-    position: relative;
-    z-index: 1000;
+.section-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.nConcept h1 {
-    text-align: center;
-    font-family: "Passions Conflict", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
+.section-image img:hover {
+    transform: scale(1.03);
 }
 
-.nConcept img {
-    width: 50%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    float: left;
-    /* position: relative; */
-    position: absolute;
-    opacity: 0.7;
-    margin-bottom: 100px;
+.section-content {
+    flex: 1;
+    padding: 20px;
 }
 
+.section-content h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
 
+.section-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
 
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        margin: 50px 0;
+    }
 
+    .section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .section-image {
+        text-align: center;
+    }
+
+    .section-image img {
+        max-width: 100%;
+    }
+}
 
 
 
